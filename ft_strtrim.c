@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/30 08:47:55 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 11:25:27 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/30 10:12:55 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/30 11:05:02 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdlib.c>
 #include <libft.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s)
 {
 	int		i;
-	int 	len;
-	char	*join;
+	int		j;
+	int		k;
+	int		last;
+	char	*fresh;
 
 	i = 0;
-	len = ft_strlen(s1) + ft_strlen(s2);
-	join = (char *)malloc(size_of(char) * (len + 1));
-	while (s1[i])
-		join[i] = s1[i];
-	i = 0;
-	while (s2[i])
-		join[i + ft_strlen(s1)] = s2[i];
-	join[len + 1] = '\0';
-	return (join);
+	j = 0;
+	k = 0;
+	last = ft_strlen(s) - 1;
+	while(s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i++;
+	while(s[last - j] == ' ' || s[last - j] == '\t' || s[last - j] == '\n')
+		j++;
+	fresh = (char *)malloc(sizeof(char) * ((last + 1) - i - j));
+	while(i < (last - j))
+	{
+		fresh[k] = s[i];
+		i++;
+		k++;
+	}
+	fresh[k] = '\0';
+	return (fresh);
 }
