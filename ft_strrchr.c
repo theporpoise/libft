@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/29 15:53:03 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 16:46:01 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/29 18:21:36 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/29 19:02:23 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <libft.h>
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t i;
-	size_t j;
+	char *ps;
 
-	i = 0;
-	j = 0;
-	if (size == 0)
+	ps = NULL;
+	while (s*)
 	{
-		return size;
+		if (s* == c)
+		{
+			ps = s;
+		}
+		s++;
 	}
-	if (size < (ft_strlen(dst) -1))
+	if (c == '\0' && s* == '\0')
 	{
-		return size;
+		return (s);
 	}
-	while (src[i])
-		i++;
-	while (src[j] && (size - ft_strlen(dst) - 1))
-	{
-		dst[i] = src[j];
-		i++;
-		j++;
-	}
-	src[i] = '\0';
-	return (i);
+	return (ps);
 }
