@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/29 19:13:57 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:27:55 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/30 08:09:32 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/30 08:11:52 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+#include <libft.h>
+
+int	ft_strequ(char const *s1, char const *s2)
 {
 	int i;
-	int dif;
 
-	i = 0;
-	dif = 0;
-	while (s1[i] != '\0' && (i < n))
-	{
-		dif = s1[i] - s2[i];
-		if (s2[i] == '\0' || (dif != 0))
-			return (dif);
-		i++;
-	}
-	if (i >= n)
-		return (0);
+	i = ft_strcmp(s1, s2);
+	if (i == 0)
+		return 1;
 	else
-		return (-(s2[i]));
+		return 0;
 }

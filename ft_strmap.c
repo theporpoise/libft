@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/29 19:13:57 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:27:55 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/30 07:46:36 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/30 07:59:02 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+#include <libft.h>
+
+char	*ft_strmap(char const *s, char (*f)(char))
 {
+	char *copy;
 	int i;
-	int dif;
 
 	i = 0;
-	dif = 0;
-	while (s1[i] != '\0' && (i < n))
+	copy = ft_strdup(s);
+	while (copy[i])
 	{
-		dif = s1[i] - s2[i];
-		if (s2[i] == '\0' || (dif != 0))
-			return (dif);
-		i++;
+		copy[i] = f(copy[i]);
 	}
-	if (i >= n)
-		return (0);
-	else
-		return (-(s2[i]));
+	return (copy);
 }

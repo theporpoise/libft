@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/29 19:13:57 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:27:55 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/30 07:30:57 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/30 07:33:40 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+#include <stdlib.h>
+
+char	*ft_strnew(size_t size)
 {
 	int i;
-	int dif;
+	char *str;
 
 	i = 0;
-	dif = 0;
-	while (s1[i] != '\0' && (i < n))
+	str = (char *)malloc(size);
+	while (i <= size)
 	{
-		dif = s1[i] - s2[i];
-		if (s2[i] == '\0' || (dif != 0))
-			return (dif);
-		i++;
+		str[i] = '\0';
 	}
-	if (i >= n)
-		return (0);
-	else
-		return (-(s2[i]));
+	return str;
 }

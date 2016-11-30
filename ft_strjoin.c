@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/29 19:13:57 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:27:55 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/30 08:47:55 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/30 08:56:05 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+#include <stdlib.h>
+#include <libft.h>
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int i;
-	int dif;
+	int		i;
+	int 	len;
+	char	*join;
 
 	i = 0;
-	dif = 0;
-	while (s1[i] != '\0' && (i < n))
-	{
-		dif = s1[i] - s2[i];
-		if (s2[i] == '\0' || (dif != 0))
-			return (dif);
-		i++;
-	}
-	if (i >= n)
-		return (0);
-	else
-		return (-(s2[i]));
+	len = ft_strlen(s1) + ft_strlen(s2);
+	join = (char *)malloc(size_of(char) * (len + 1));
+	while (s1[i])
+		join[i] = s1[i];
+	i = 0;
+	while (s2[i])
+		join[i + ft_strlen(s1)] = s2[i];
+	join[len + 1] = '\0';
+	return (join);
 }

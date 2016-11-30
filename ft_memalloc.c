@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/29 19:13:57 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:27:55 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/30 07:08:59 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/30 07:15:24 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
-{
-	int i;
-	int dif;
+#include <stdlib.h>
+#include <libft.h>
 
-	i = 0;
-	dif = 0;
-	while (s1[i] != '\0' && (i < n))
-	{
-		dif = s1[i] - s2[i];
-		if (s2[i] == '\0' || (dif != 0))
-			return (dif);
-		i++;
-	}
-	if (i >= n)
-		return (0);
-	else
-		return (-(s2[i]));
+void *ft_memalloc(size_t size)
+{
+	void	*memspace;
+
+	memspace = malloc(size);
+	bzero(memspace, size);
+	return (memspace);
 }

@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/29 19:13:57 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:27:55 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/30 08:32:30 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/30 08:45:31 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+#include <stdlib.h>
+
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	int i;
-	int dif;
+	char *substr;
 
 	i = 0;
-	dif = 0;
-	while (s1[i] != '\0' && (i < n))
+	substr = (char *)malloc(len);
+	while (i < len)
 	{
-		dif = s1[i] - s2[i];
-		if (s2[i] == '\0' || (dif != 0))
-			return (dif);
+		substr[i] = s[start + i];
 		i++;
 	}
-	if (i >= n)
-		return (0);
-	else
-		return (-(s2[i]));
+	return (substr);
 }

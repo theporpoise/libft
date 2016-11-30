@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/29 19:13:57 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:27:55 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/30 07:39:04 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/30 07:43:10 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
-	int dif;
 
 	i = 0;
-	dif = 0;
-	while (s1[i] != '\0' && (i < n))
+	while (s[i])
 	{
-		dif = s1[i] - s2[i];
-		if (s2[i] == '\0' || (dif != 0))
-			return (dif);
+		f(&s[i]);
 		i++;
 	}
-	if (i >= n)
-		return (0);
-	else
-		return (-(s2[i]));
 }
