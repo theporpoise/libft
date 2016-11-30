@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 11:38:24 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 11:32:47 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 13:47:30 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+
 
 // Part 1
 
@@ -72,10 +80,28 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 
+char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
+void	ft_putendl(char const *s);
+
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+// Bonus Functions:
 
 
+
+
+// "secret" functions
+// make_word, from strsplit function, takes string and char and makes a word
+// itoabase
+// print_memory
+// brain_fuck
+// any other test question that you need
 #endif
 
 
