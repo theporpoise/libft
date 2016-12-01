@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 18:21:36 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 19:02:23 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 19:28:40 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@ char	*ft_strrchr(const char *s, int c)
 	char *ps;
 
 	ps = NULL;
-	while (s*)
+	while (*s)
 	{
-		if (s* == c)
+		if (*s == c)
 		{
-			ps = s;
+			ps = (char *)s;
 		}
 		s++;
 	}
-	if (c == '\0' && s* == '\0')
+	if (c == '\0' && *s == '\0')
 	{
-		return (s);
+		return ((char *)s);
 	}
 	return (ps);
 }

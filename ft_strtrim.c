@@ -6,11 +6,11 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 10:12:55 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 11:05:02 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 18:40:51 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.c>
+#include <stdlib.h>
 #include <libft.h>
 
 char	*ft_strtrim(char const *s)
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s)
 	i = 0;
 	j = 0;
 	k = 0;
-	last = ft_strlen(s) - 1;
+	last = ft_strlen((char *)s) - 1;
 	while(s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
 		i++;
 	while(s[last - j] == ' ' || s[last - j] == '\t' || s[last - j] == '\n')

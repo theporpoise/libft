@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 11:55:40 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 11:57:49 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 18:23:16 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
+	ft_putstr((char *)s);
 	ft_putchar('\n');
 }

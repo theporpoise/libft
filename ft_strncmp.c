@@ -6,14 +6,16 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 19:13:57 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:27:55 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 20:34:24 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {
-	int i;
-	int dif;
+	size_t	i;
+	int		dif;
 
 	i = 0;
 	dif = 0;
@@ -21,11 +23,11 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 	{
 		dif = s1[i] - s2[i];
 		if (s2[i] == '\0' || (dif != 0))
-			return (dif);
+			return ((unsigned char)dif);
 		i++;
 	}
 	if (i >= n)
 		return (0);
 	else
-		return (-(s2[i]));
+		return ((unsigned char)(s2[i]));
 }

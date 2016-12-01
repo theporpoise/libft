@@ -6,22 +6,26 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 18:47:29 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 19:04:43 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 20:35:35 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int i;
-	int j;
-	int flag;
-	char *ptr;
+	size_t	i;
+	int 	j;
+	int 	flag;
+	char 	*ptr;
 
 	i = 0;
 	flag = 0;
 	ptr = NULL;
+	/*i
 	if (!little)
-		return big;
+		return (char *)big;
+	*/
 	while (big[i] && (i < len))
 	{
 		j = 0;
@@ -38,7 +42,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		if (little[j] == '\0' && flag == 0)
 		{
-			ptr = &big[i];
+			ptr = (char *)(big + i);
 			return ptr;
 		}
 		i++;

@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 07:08:59 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 07:15:24 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 20:21:17 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void *ft_memalloc(size_t size)
 	void	*memspace;
 
 	memspace = malloc(size);
+	if (!memspace)
+		return (NULL);
 	bzero(memspace, size);
 	return (memspace);
 }

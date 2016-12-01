@@ -6,11 +6,13 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 18:24:49 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 18:46:58 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 20:34:48 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strstr(const char *big, const char *little)
+#include <libft.h>
+
+char	*ft_strstr(const char *big, const char *little)
 {
 	int i;
 	int j;
@@ -21,7 +23,7 @@ char	*strstr(const char *big, const char *little)
 	flag = 0;
 	ptr = NULL;
 	if (!little)
-		return big;
+		return (char *)big;
 	while (big[i])
 	{
 		j = 0;
@@ -38,7 +40,7 @@ char	*strstr(const char *big, const char *little)
 		}
 		if (little[j] == '\0' && flag == 0)
 		{
-			ptr = &big[i];
+			ptr = (char *)(big + i);
 			return ptr;
 		}
 		i++;

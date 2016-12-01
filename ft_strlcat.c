@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 18:20:13 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 18:20:18 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 19:09:28 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	{
 		return size;
 	}
-	if (size < (ft_strlen(dst) -1))
+	if (size < (size_t)(ft_strlen(dst) - 1))
 	{
 		return size;
 	}
 	while (src[i])
 		i++;
-	while (src[j] && (size - ft_strlen(dst) - 1))
+	while (src[j] && (size_t*)(size - ft_strlen(dst) - 1))
 	{
 		dst[i] = src[j];
 		i++;
 		j++;
 	}
-	src[i] = '\0';
+	dst[i] = '\0';
 	return (i);
 }

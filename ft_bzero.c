@@ -6,21 +6,14 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 20:26:42 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 20:28:26 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 19:08:17 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libft.h>
 
-void	*ft_bzero(void *b, size_t len)
+
+void	ft_bzero(void *b, size_t len)
 {
-	int i;
-
-	i = 0;
-	while (i < len)
-	{
-		b[i] = 0;
-		i++;
-	}
-	return (b);
+	ft_memset(b, '\0', len);
 }

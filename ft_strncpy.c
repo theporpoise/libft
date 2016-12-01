@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 15:23:45 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 15:32:44 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 17:58:54 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char *ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
 	while (i < len)

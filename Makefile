@@ -6,7 +6,7 @@
 #    By: mgould <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/28 11:37:28 by mgould            #+#    #+#              #
-#    Updated: 2016/11/30 15:42:20 by mgould           ###   ########.fr        #
+#    Updated: 2016/11/30 15:44:41 by mgould           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC	= ft_atoi.c ft_putchar.c ft_strlen.c \
 		ft_memcpy.c \
 		ft_strrchr.c ft_strstr.c ft_strnstr.c \
 		ft_strcmp.c ft_strncmp.c ft_isalpha.c \
-		ft_isdigit.c ft_isalnum.c ft_isasc[.c \
+		ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_isprint.c ft_tolower.c ft_toupper.c \
 		ft_memalloc.c ft_memdel.c ft_strnew.c \
 		ft_strdel.c ft_strclr.c ft_striter.c \
@@ -30,7 +30,8 @@ SRC	= ft_atoi.c ft_putchar.c ft_strlen.c \
 		ft_strjoin.c ft_strtrim.c ft_strsplit.c \
 		ft_itoa.c ft_putendl.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-		ft_lstnew.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c]
+		ft_lstnew.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c
+
 O = $(SRC:.c=.o)
 
 all: $(NAME)

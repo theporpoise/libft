@@ -6,11 +6,11 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 11:07:44 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 11:35:43 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 19:36:24 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.c>
+#include <stdlib.h>
 #include <libft.h>
 
 static char	*make_word(char *s, char c)
@@ -35,20 +35,23 @@ static char	*make_word(char *s, char c)
 char	**ft_strsplit(char const *s, char c)
 {
 	int		i;
-	char	**arfresh
+	char	**arfresh;
+	char	*ptrs;
 
+	ptrs = (char *)s;
+	arfresh = NULL;
 	i = 0;
-	while (s)
+	while (ptrs)
 	{
-		if (s* == c)
+		if (*ptrs == c)
 		{
-			s++;
+			ptrs++;
 			continue;
 		}
 		else
 		{
-			arfresh[i] = make_word(s, c);
-			s += (ft_strlen(arfresh[i]) - 1);
+			arfresh[i] = make_word(ptrs, c);
+			ptrs += (ft_strlen(arfresh[i]) - 1);
 			i++;
 		}
 	}

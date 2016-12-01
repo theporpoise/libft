@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 08:09:32 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:11:52 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/30 18:32:43 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_strequ(char const *s1, char const *s2)
 {
 	int i;
 
-	i = ft_strcmp(s1, s2);
+	i = ft_strcmp((char *)s1, (char *)s2);
 	if (i == 0)
 		return 1;
 	else
