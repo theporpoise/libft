@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 18:20:13 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/01 21:05:44 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/02 08:06:14 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,30 @@
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
+	char		*d;
+	const char	*s;
+	size_t 		n;
+	size_t 		dlen;
 
-	i = 0;
-	j = ft_strlen(dst);
-	while (src[i] && (j < size))
+	d = dst;
+	s = src;
+	n = size;
+
+	while (n-- != 0 && *d != '\0')
+		d++;
+	dlen = d - dst;
+	n = size - dlen;
+	if (n == 0)
+		return (dlen + strlen(s));
+	while (*s != '\0')
 	{
-		dst[j] = src[i];
-		i++;
-		j++;
+		if (n != 1)
+		{
+			*d++ = *s;
+			n--;
+		}
+		s++;
 	}
-	if (j == size)
-	{
-		dst[j - 1] = '\0';
-		return (ft_strlen(dst) + ft_strlen((char *)src));
-	}
-	else if (src[i] == '\0')
-	{
-		dst[j] = '\0';
-		return (ft_strlen(dst) + ft_strlen((char *)src));
-	}
-	return (size + ft_strlen((char *)src));
+	*d = '\0';
+	return (dlen + (s - src));
 }
