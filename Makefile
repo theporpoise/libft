@@ -6,7 +6,7 @@
 #    By: mgould <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/28 11:37:28 by mgould            #+#    #+#              #
-#    Updated: 2016/11/30 15:44:41 by mgould           ###   ########.fr        #
+#    Updated: 2016/12/01 17:31:10 by mgould           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,9 +36,11 @@ O = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(CFLAGS) -c $(SRC)
+$(NAME): $(O)
 	ar rc $(NAME) $(O)
+
+%.o: %.c
+	gcc $(CFLAGS) -c -o $@ $^
 
 clean:
 	rm -f $(O)
@@ -47,3 +49,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+super: all clean
