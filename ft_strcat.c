@@ -6,9 +6,11 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 15:33:22 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 15:42:22 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/01 19:09:46 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 char *ft_strcat(char *s1, const char *s2)
 {
@@ -16,15 +18,13 @@ char *ft_strcat(char *s1, const char *s2)
 	int j;
 
 	i = 0;
-	j = 0;
-	while (s1[i])
-		i++;
-	while (s2[j])
+	j = ft_strlen(s1);
+	while (s2[i])
 	{
-		s1[i] = s2[j];
+		s1[j] = s2[i];
 		j++;
 		i++;
 	}
-	s1[i] = '\0';
+	s1[j] = '\0';
 	return (s1);
 }

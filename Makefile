@@ -6,7 +6,7 @@
 #    By: mgould <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/28 11:37:28 by mgould            #+#    #+#              #
-#    Updated: 2016/12/01 17:31:10 by mgould           ###   ########.fr        #
+#    Updated: 2016/12/01 19:59:15 by mgould           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,5 +49,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-super: all clean
