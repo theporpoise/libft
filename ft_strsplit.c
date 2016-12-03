@@ -6,13 +6,12 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 11:07:44 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/02 20:52:01 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/03 14:13:14 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <libft.h>
-#include <stdio.h>
 
 static char	*make_word(char *s, char c)
 {
@@ -23,6 +22,8 @@ static char	*make_word(char *s, char c)
 	while ((s[i] != c) && (s[i] != '\0'))
 		i++;
 	word = (char *)malloc(sizeof(char) * (i + 1));
+	if (!word)
+		return (NULL);
 	i = 0;
 	while ((s[i] != c) && (s[i] != '\0'))
 	{
@@ -33,16 +34,46 @@ static char	*make_word(char *s, char c)
 	return (word);
 }
 
+static int	wc(char *s, char c)
+{
+	int i;
+	int flag;
+	int words;
+
+	i = 0;
+	flag = 0;
+	words = 0;
+	while (s[i])
+	{
+		if ((s[i] != c) && flag == 0)
+		{
+			flag = 1;
+			words += 1;
+		}
+		else if (s[i] == c)
+		{
+			flag = 0;
+		}
+		i++;
+	}
+	return words;
+}
+
+
 char	**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	char	**arfresh;
 	char	*ptrs;
 
+	if (!s)
+		return (NULL);
 	ptrs = (char *)s;
-	arfresh = NULL;
+	arfresh = (char **)malloc(sizeof(char**) * (wc(ptrs, c) + 1));
+	if (!arfresh)
+		return (NULL);
 	i = 0;
-	while (ptrs)
+	while (*ptrs)
 	{
 		if (*ptrs == c)
 		{
@@ -51,10 +82,11 @@ char	**ft_strsplit(char const *s, char c)
 		}
 		else
 		{
-			arfresh[i] = make_word(ptrs, c);
-			ptrs += (ft_strlen(arfresh[i]) - 1);
+            arfresh[i] = make_word(ptrs, c);
+			ptrs += (ft_strlen(arfresh[i]));
 			i++;
 		}
 	}
+    arfresh[i] = (NULL);
 	return (arfresh);
 }
