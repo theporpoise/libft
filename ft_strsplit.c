@@ -6,12 +6,13 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 11:07:44 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 19:36:24 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/02 20:52:01 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <libft.h>
+#include <stdio.h>
 
 static char	*make_word(char *s, char c)
 {
