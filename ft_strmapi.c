@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 07:54:17 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 08:39:34 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/02 16:06:10 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int i;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	copy = ft_strdup(s);
+	if (!copy)
+		return (NULL);
 	while (copy[i])
 	{
 		copy[i] = f(i, copy[i]);

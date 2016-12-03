@@ -6,20 +6,19 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/01 15:13:29 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 16:47:57 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/02 16:40:19 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+#include <unistd.h>
 
 void	ft_putstr(char *str)
 {
-	int index;
+	size_t	i;
 
-	index = 0;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	if (!str)
+		return ;
+	i = ft_strlen(str);
+	write(1, str, i);
 }
