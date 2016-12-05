@@ -6,7 +6,7 @@
 #    By: mgould <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/28 11:37:28 by mgould            #+#    #+#              #
-#    Updated: 2016/12/01 19:59:15 by mgould           ###   ########.fr        #
+#    Updated: 2016/12/04 14:17:11 by mgould           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ SRC	= ft_atoi.c ft_putchar.c ft_strlen.c \
 		ft_strjoin.c ft_strtrim.c ft_strsplit.c \
 		ft_itoa.c ft_putendl.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-		ft_lstnew.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c
+		ft_lstnew.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c \
+		ft_lstmap.c ft_lstiter.c
 
 O = $(SRC:.c=.o)
 

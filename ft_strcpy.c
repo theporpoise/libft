@@ -6,11 +6,11 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 15:16:00 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 15:20:34 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:46:52 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dst, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 

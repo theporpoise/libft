@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 21:03:04 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 19:11:04 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:44:44 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t 			i;
+	size_t			i;
 	unsigned char	dif;
 	unsigned char	*ptr1;
 	unsigned char	*ptr2;

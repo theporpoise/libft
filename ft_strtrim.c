@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/02 17:33:04 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/02 19:12:12 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:38:41 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,45 +23,27 @@ char	*ft_strtrim(char const *s)
 
 	i = 0;
 	k = 0;
-	//printf("start\n");
 	if (!s)
-	{
-		//printf("protection triggered\n");
 		return (NULL);
-	}
 	len = strlen(s) - 1;
-	while(s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-	{
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-		//printf("%d,", i);
-	}
 	if (s[i] == '\0')
 	{
 		value = (char *)malloc(sizeof(value) * 1);
-	   	value[0] = '\0';
-		//printf("string is all whitespace");
+		value[0] = '\0';
 		return (value);
 	}
-	while((s[len] == ' ') || (s[len] == '\n') || (s[len] == '\t'))
-	{
+	while ((s[len] == ' ') || (s[len] == '\n') || (s[len] == '\t'))
 		len--;
-		//printf("%d,", len);
-	}
-	if (!(value = malloc((len - i + 2)))) //sizeof(value) * (len - i + 3))))
-	{
-		//printf("no malloc returned\n");
+	if (!(value = malloc((len - i + 2))))
 		return (NULL);
-	}
-	//printf("\nl:%d, i:%d, len:%d, mal:%zu k:%d\n", len, i, (len-i+ 3), sizeof(value), k);
-	while(i <= len)
+	while (i <= len)
 	{
 		value[k] = s[i];
 		k++;
-   		i++;
+		i++;
 	}
-	//printf("\nl:%d, i:%d, len:%d, mal:%zu k:%d\n", len, i, (len-i+ 3), sizeof(value), k);
 	value[k] = '\0';
-	//printf("\nl:%d, i:%d, len:%d, mal:%lu k:%d\n", len, i, (len-i+ 3), strlen(value), k);
 	return (value);
 }
-

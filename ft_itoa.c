@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 11:38:25 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/04 12:31:51 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:44:00 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 		copy = copy / 10;
 	}
 	if (!(num = (char *)malloc(sizeof(char) * (len + 1))))
-			return (NULL);
+		return (NULL);
 	num[len] = '\0';
 	copy = n;
 	if (copy < 0)
@@ -53,8 +53,8 @@ char	*ft_itoa(int n)
 	}
 	while (copy != 0)
 	{
-        len--;
-        num[len] = ((copy % 10) + '0');
+		len--;
+		num[len] = ((copy % 10) + '0');
 		copy = copy / 10;
 	}
 	return (num);

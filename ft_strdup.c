@@ -6,16 +6,16 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 14:33:30 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/01 13:17:01 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:47:23 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	int i;
-	char *copy;
+	int		i;
+	char	*copy;
 
 	i = 0;
 	while (s1[i])
@@ -30,5 +30,5 @@ char *ft_strdup(const char *s1)
 		copy[i] = s1[i];
 		i++;
 	}
-	return copy;
+	return (copy);
 }

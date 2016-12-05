@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 08:47:55 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/02 16:29:18 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:47:59 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
-	int 	len;
+	int		len;
 	char	*join;
 
 	i = 0;

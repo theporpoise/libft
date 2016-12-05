@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 11:07:44 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/03 14:13:14 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:52:19 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static char	*make_word(char *s, char c)
 {
-	int 	i;
+	int		i;
 	char	*word;
 
 	i = 0;
@@ -36,9 +36,9 @@ static char	*make_word(char *s, char c)
 
 static int	wc(char *s, char c)
 {
-	int i;
+	int	i;
 	int flag;
-	int words;
+	int	words;
 
 	i = 0;
 	flag = 0;
@@ -56,11 +56,10 @@ static int	wc(char *s, char c)
 		}
 		i++;
 	}
-	return words;
+	return (words);
 }
 
-
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	char	**arfresh;
@@ -82,11 +81,11 @@ char	**ft_strsplit(char const *s, char c)
 		}
 		else
 		{
-            arfresh[i] = make_word(ptrs, c);
+			arfresh[i] = make_word(ptrs, c);
 			ptrs += (ft_strlen(arfresh[i]));
 			i++;
 		}
 	}
-    arfresh[i] = (NULL);
+	arfresh[i] = (NULL);
 	return (arfresh);
 }

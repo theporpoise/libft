@@ -6,13 +6,13 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 15:23:45 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/01 17:00:30 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:49:25 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char *ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t	i;
 	int		flag;

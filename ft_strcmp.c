@@ -6,16 +6,16 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/01 15:22:18 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/02 12:04:46 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:46:29 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	while(*s1 && (*s1==*s2))
+	while (*s1 && (*s1 == *s2))
 	{
 		s1++;
 		s2++;
 	}
-	return *(unsigned char*)s1 - *(unsigned char*)s2;
+	return (*(unsigned char*)s1 - *(unsigned char*)s2);
 }

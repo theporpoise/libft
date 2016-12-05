@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/30 13:32:34 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 13:37:24 by mgould           ###   ########.fr       */
+/*   Created: 2016/12/04 13:17:01 by mgould            #+#    #+#             */
+/*   Updated: 2016/12/04 13:20:31 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,21 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	long	nb;
+
+	nb = n;
+	if (nb < 0)
+	{
+		ft_putchar_fd(('-'), fd);
+		nb = -nb;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr_fd((nb / 10), fd);
+		ft_putnbr_fd((nb % 10), fd);
+	}
+	else
+	{
+		ft_putchar_fd((nb + '0'), fd);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 18:47:29 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/30 20:35:35 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 18:51:39 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,18 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	int 	j;
-	int 	flag;
-	char 	*ptr;
+	int		j;
+	int		flag;
+	char	*ptr;
 
 	i = 0;
 	flag = 0;
 	ptr = NULL;
-	/*i
-	if (!little)
-		return (char *)big;
-	*/
 	while (big[i] && (i < len))
 	{
 		j = 0;
 		flag = 0;
-		while(little[j])
+		while (little[j])
 		{
 			if (little[j] == big[i])
 			{
@@ -43,7 +39,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		if (little[j] == '\0' && flag == 0)
 		{
 			ptr = (char *)(big + i);
-			return ptr;
+			return (ptr);
 		}
 		i++;
 	}
