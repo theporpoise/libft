@@ -6,11 +6,10 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 18:20:13 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/04 18:30:10 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 19:57:55 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <libft.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -28,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dlen = d - dst;
 	n = size - dlen;
 	if (n == 0)
-		return (dlen + strlen(s));
+		return (dlen + ft_strlen((char *)s));
 	while (*s != '\0')
 	{
 		if (n != 1)

@@ -6,16 +6,18 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 07:39:04 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/02 12:42:12 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/05 16:35:45 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 
 	i = 0;
-	if (!s || !*s)
+	if (!s || !f)
 		return ;
 	while (s[i])
 	{

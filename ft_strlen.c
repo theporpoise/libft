@@ -6,13 +6,15 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/01 15:20:30 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/01 15:20:45 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/04 20:22:30 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <libft.h>
+
+size_t	ft_strlen(char *str)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (str[i] != '\0')
