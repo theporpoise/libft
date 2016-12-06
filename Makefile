@@ -6,7 +6,7 @@
 #    By: mgould <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/28 11:37:28 by mgould            #+#    #+#              #
-#    Updated: 2016/12/05 21:01:19 by mgould           ###   ########.fr        #
+#    Updated: 2016/12/06 15:05:16 by mgould           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,9 @@ SRC	= ft_atoi.c ft_putchar.c ft_strlen.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_lstnew.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c \
 		ft_lstmap.c ft_lstiter.c ft_wc.c ft_make_word.c \
-		ft_mnbr.c ft_getz.c ft_fill_char.c
+		ft_mnbr.c ft_getz.c ft_fill_char.c \
+		ft_is_prime.c ft_sqrt.c ft_iterative_power.c \
+		ft_recursive_factorial.c
 
 O = $(SRC:.c=.o)
 

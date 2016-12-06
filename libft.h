@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 11:38:24 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/06 14:35:09 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/06 15:06:25 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,8 @@ char				*ft_make_word(char *s, char c);
 void				ft_mnbr(char *num, int len, int n);
 char				*ft_getz(char *num);
 void				*ft_fill_char(char *value, char *s, int len, int i);
+int					ft_recursive_factorial(int nb);
+int					ft_iterative_power(int nb, int power);
+int					ft_sqrt(int nb);
+int					ft_is_prime(int nb);
 #endif
