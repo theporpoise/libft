@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/02 17:33:04 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/04 19:59:18 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/05 21:05:38 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,6 @@ char	*ft_strtrim(char const *s)
 		len--;
 	if (!(value = malloc((len - i + 2))))
 		return (NULL);
-	while (i <= len)
-	{
-		value[k] = s[i];
-		k++;
-		i++;
-	}
-	value[k] = '\0';
+	ft_fill_char(value, (char*)s, len, i);
 	return (value);
 }

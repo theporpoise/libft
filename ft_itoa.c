@@ -6,45 +6,12 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 11:38:25 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/05 20:26:48 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/05 20:47:11 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-static void	ft_mnbr(char *num, int len, int n)
-{
-	long	copy;
-	int		i;
-
-	i = 0;
-	copy = n;
-	num[len] = '\0';
-	if (copy < 0)
-	{
-		num[i] = '-';
-		i++;
-		copy = copy * -1;
-	}
-	while (copy != 0)
-	{
-		len--;
-		num[len] = ((copy % 10) + '0');
-		copy = copy / 10;
-	}
-}
-
-static char	*ft_getz(char *num)
-{
-	if ((num = (char *)malloc(sizeof(char) * (2))))
-	{
-		num[0] = '0';
-		num[1] = '\0';
-		return (num);
-	}
-	else
-		return (NULL);
-}
+#include <libft.h>
 
 char	*ft_itoa(int n)
 {

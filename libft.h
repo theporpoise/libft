@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 11:38:24 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/05 19:44:52 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/05 21:02:00 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,7 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 int					ft_wc(char *s, char c);
 char				*ft_make_word(char *s, char c);
+void				ft_mnbr(char *num, int len, int n);
+char				*ft_getz(char *num);
+void				*ft_fill_char(char *value, char *s, int len, int i);
 #endif
