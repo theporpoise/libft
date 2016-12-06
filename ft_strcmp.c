@@ -6,11 +6,11 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/01 15:22:18 by mgould            #+#    #+#             */
-/*   Updated: 2016/12/04 18:46:29 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/06 14:26:44 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1 && (*s1 == *s2))
 	{

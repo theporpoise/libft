@@ -6,11 +6,11 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 19:17:43 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/29 19:17:51 by mgould           ###   ########.fr       */
+/*   Updated: 2016/12/06 14:34:24 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int sign;
 	int number;
